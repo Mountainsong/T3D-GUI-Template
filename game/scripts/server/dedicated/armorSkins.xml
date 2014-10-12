@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Skins>
+    <base Skin="base" />
+    <DarkBlue Skin="DarkBlue" />
+    <DarkGreen Skin="DarkGreen" />
+    <LightGreen Skin="LightGreen" />
+    <Orange Skin="Orange" />
+    <Red Skin="Red" />
+    <Teal Skin="Teal" />
+    <Violet Skin="Violet" />
+    <Yellow Skin="Yellow" />  
+</Skins>

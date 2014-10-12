@@ -1,0 +1,191 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiChunkedBitmapCtrl(MainMenuGui) {
+   bitmap = "art/gui/background";
+   useVariable = "0";
+   tile = "0";
+   position = "0 0";
+   extent = "1920 1080";
+   minExtent = "8 8";
+   horizSizing = "relative";
+   vertSizing = "relative";
+   profile = "GuiDefaultProfile";
+   visible = "1";
+   active = "1";
+   tooltipProfile = "GuiToolTipProfile";
+   hovertime = "1000";
+   isContainer = "1";
+   canSave = "1";
+   canSaveDynamicFields = "1";
+      enabled = "1";
+      isDecoy = "0";
+
+   new GuiBitmapCtrl() {
+      bitmap = "art/gui/metalPad.png";
+      wrap = "0";
+      position = "0 0";
+      extent = "1920 1080";
+      minExtent = "8 2";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      profile = "GuiDefaultProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "0";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+   };
+   new GuiControl() {
+      position = "811 399";
+      extent = "300 600";
+      minExtent = "8 2";
+      horizSizing = "relative";
+      vertSizing = "relative";
+      profile = "GuiDefaultProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "1";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+
+      new GuiButtonCtrl() {
+         text = "Play";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "1";
+         position = "9 18";
+         extent = "283 50";
+         minExtent = "8 8";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         profile = "GuiMenuButtonProfile";
+         visible = "1";
+         active = "1";
+         command = "Canvas.setContent(PlaySinglePlayerGui);";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiButtonCtrl() {
+         text = "Multiplayer";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 69";
+         extent = "283 50";
+         minExtent = "8 8";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         profile = "GuiMenuButtonProfile";
+         visible = "1";
+         active = "1";
+         command = "Canvas.setContent(HostOrJoinGui);";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiButtonCtrl() {
+         text = "Options";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 120";
+         extent = "283 50";
+         minExtent = "8 8";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         profile = "GuiMenuButtonProfile";
+         visible = "1";
+         active = "1";
+         command = "Canvas.pushDialog(optionsDlg);";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiButtonCtrl() {
+         text = "Gui Editor";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 171";
+         extent = "283 50";
+         minExtent = "8 8";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         profile = "GuiMenuButtonProfile";
+         visible = "1";
+         active = "1";
+         command = "GuiEdit();";
+         tooltipProfile = "GuiToolTipProfile";
+         tooltip = "The GUI Editor is accessible in-game by pressing F10";
+         hovertime = "1000";
+         isContainer = "0";
+         internalName = "GuiEditorButton";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiButtonCtrl() {
+         text = "World Editor";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 222";
+         extent = "283 50";
+         minExtent = "8 8";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         profile = "GuiMenuButtonProfile";
+         visible = "1";
+         active = "1";
+         command = "toggleEditor(1);";
+         tooltipProfile = "GuiToolTipProfile";
+         tooltip = "The World Editor is accessible in-game by pressing F11";
+         hovertime = "1000";
+         isContainer = "0";
+         internalName = "WorldEditorButton";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+      new GuiButtonCtrl() {
+         text = "Exit";
+         groupNum = "-1";
+         buttonType = "PushButton";
+         useMouseEvents = "0";
+         position = "9 273";
+         extent = "283 50";
+         minExtent = "8 8";
+         horizSizing = "relative";
+         vertSizing = "bottom";
+         profile = "GuiMenuButtonProfile";
+         visible = "1";
+         active = "1";
+         command = "quit();";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "0";
+         internalName = "ExitButton";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+function MainMenuGui::onWake(%this)
+{
+   if (isFunction("getWebDeployment") && getWebDeployment() && isObject(%this-->ExitButton))
+	{
+		%this-->ExitButton.setVisible(false);
+	}
+	
+	$mainMenuActive = true;
+}

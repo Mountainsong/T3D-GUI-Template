@@ -1,0 +1,212 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiBitmapCtrl(LoginGui) {
+   bitmap = "art/gui/metalPad.png";
+   wrap = "0";
+   position = "0 0";
+   extent = "1920 1080";
+   minExtent = "8 2";
+   horizSizing = "relative";
+   vertSizing = "relative";
+   profile = "GuiDefaultProfile";
+   visible = "1";
+   active = "1";
+   tooltipProfile = "GuiToolTipProfile";
+   hovertime = "1000";
+   isContainer = "1";
+   canSave = "1";
+   canSaveDynamicFields = "1";
+
+   new GuiWindowCtrl() {
+      text = "Login";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      canCollapse = "0";
+      closeCommand = "Canvas.setContent(MainMenuGui);";
+      edgeSnap = "1";
+      margin = "0 0 0 0";
+      padding = "0 0 0 0";
+      anchorTop = "0";
+      anchorBottom = "0";
+      anchorLeft = "0";
+      anchorRight = "0";
+      position = "760 415";
+      extent = "400 250";
+      minExtent = "8 2";
+      horizSizing = "center";
+      vertSizing = "center";
+      profile = "GuiWindowProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "1";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+
+      new GuiBitmapCtrl() {
+         bitmap = "art/gui/metalPad.png";
+         wrap = "0";
+         position = "4 21";
+         extent = "392 225";
+         minExtent = "8 2";
+         horizSizing = "center";
+         vertSizing = "center";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "1";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+
+         new GuiTextCtrl() {
+            text = "Login";
+            maxLength = "1024";
+            margin = "0 0 0 0";
+            padding = "0 0 0 0";
+            anchorTop = "0";
+            anchorBottom = "0";
+            anchorLeft = "0";
+            anchorRight = "0";
+            position = "164 14";
+            extent = "64 30";
+            minExtent = "8 2";
+            horizSizing = "center";
+            vertSizing = "windowRelative";
+            profile = "GuiLoginTextProfile";
+            visible = "1";
+            active = "1";
+            tooltipProfile = "GuiToolTipProfile";
+            hovertime = "1000";
+            isContainer = "1";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+         };
+         new GuiTextEditCtrl(LoginTextEdit) {
+            historySize = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "1";
+            password = "0";
+            passwordMask = "*";
+            text = "Login";
+            maxLength = "20";
+            margin = "0 0 0 0";
+            padding = "0 0 0 0";
+            anchorTop = "1";
+            anchorBottom = "0";
+            anchorLeft = "1";
+            anchorRight = "0";
+            position = "124 60";
+            extent = "144 18";
+            minExtent = "8 2";
+            horizSizing = "center";
+            vertSizing = "windowRelative";
+            profile = "GuiTextEditProfile";
+            visible = "1";
+            active = "1";
+            command = "$Player::ServerParam1 = LoginTextEdit.getText();";
+            tooltipProfile = "GuiToolTipProfile";
+            hovertime = "1000";
+            isContainer = "1";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+         };
+         new GuiTextEditCtrl(PWTextEdit) {
+            historySize = "0";
+            tabComplete = "0";
+            sinkAllKeyEvents = "1";
+            password = "1";
+            passwordMask = "*";
+            text = "Password";
+            maxLength = "20";
+            margin = "0 0 0 0";
+            padding = "0 0 0 0";
+            anchorTop = "1";
+            anchorBottom = "0";
+            anchorLeft = "1";
+            anchorRight = "0";
+            position = "124 103";
+            extent = "144 18";
+            minExtent = "8 2";
+            horizSizing = "center";
+            vertSizing = "windowRelative";
+            profile = "GuiTextEditProfile";
+            visible = "1";
+            active = "1";
+            command = "$Player::ServerParam2 = PWTextEdit.getText();";
+            tooltipProfile = "GuiToolTipProfile";
+            hovertime = "1000";
+            isContainer = "1";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+         };
+         new GuiButtonCtrl() {
+            text = "OK";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+            position = "88 155";
+            extent = "100 30";
+            minExtent = "8 2";
+            horizSizing = "windowRelative";
+            vertSizing = "windowRelative";
+            profile = "GuiButtonProfile";
+            visible = "1";
+            active = "1";
+            command = "loginGuiOK();";
+            accelerator = "enter";
+            tooltipProfile = "GuiToolTipProfile";
+            hovertime = "1000";
+            isContainer = "0";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+         };
+         new GuiButtonCtrl() {
+            text = "Cancel";
+            groupNum = "-1";
+            buttonType = "PushButton";
+            useMouseEvents = "0";
+            position = "204 155";
+            extent = "100 30";
+            minExtent = "8 2";
+            horizSizing = "right";
+            vertSizing = "bottom";
+            profile = "GuiButtonProfile";
+            visible = "1";
+            active = "1";
+            command = "Canvas.setContent(MainMenuGui);";
+            accelerator = "escape";
+            tooltipProfile = "GuiToolTipProfile";
+            hovertime = "1000";
+            isContainer = "0";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+// A client can use multiple logins and is never denied at 
+// the initial local login check. All this does is store 
+// the login locally. For now, this data is just passed on
+// to the server the client connects to. To avoid confusion,
+// The client has a chance to update this information 
+// in the joinServer GUI.
+
+// In the case of a master server being in place, this data
+// would be verified at the master server.
+function LoginGuiOK( %this)
+{
+	// Failsafe to be sure our Login and PW are updated.
+	$Player::ServerParam1 = LoginTextEdit.getText();
+	$Player::ServerParam2 = PWTextEdit.getText();	
+
+	Canvas.pushDialog(HostOrJoinGui);
+	Canvas.popDialog(LoginGui);	
+}

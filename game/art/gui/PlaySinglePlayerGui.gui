@@ -1,0 +1,1372 @@
+//--- OBJECT WRITE BEGIN ---
+%guiContent = new GuiBitmapCtrl(PlaySinglePlayerGui) {
+   bitmap = "art/gui/metalPad.png";
+   wrap = "0";
+   position = "0 0";
+   extent = "1920 1080";
+   minExtent = "8 2";
+   horizSizing = "relative";
+   vertSizing = "relative";
+   profile = "GuiDefaultProfile";
+   visible = "1";
+   active = "1";
+   tooltipProfile = "GuiToolTipProfile";
+   hovertime = "1000";
+   isContainer = "1";
+   canSave = "1";
+   canSaveDynamicFields = "1";
+      ButtonLock = "GameModeButton1";
+      CharacterButton1 = "0";
+      GameModeButton1 = "1";
+      MapButton1 = "0";
+
+   new GuiWindowCtrl() {
+      text = "Single Player";
+      resizeWidth = "1";
+      resizeHeight = "1";
+      canMove = "1";
+      canClose = "1";
+      canMinimize = "0";
+      canMaximize = "0";
+      canCollapse = "0";
+      closeCommand = "Canvas.setContent(MainMenuGui);";
+      edgeSnap = "1";
+      margin = "0 0 0 0";
+      padding = "0 0 0 0";
+      anchorTop = "0";
+      anchorBottom = "0";
+      anchorLeft = "0";
+      anchorRight = "0";
+      position = "560 240";
+      extent = "800 600";
+      minExtent = "8 2";
+      horizSizing = "center";
+      vertSizing = "center";
+      profile = "GuiWindowProfile";
+      visible = "1";
+      active = "1";
+      tooltipProfile = "GuiToolTipProfile";
+      hovertime = "1000";
+      isContainer = "1";
+      canSave = "1";
+      canSaveDynamicFields = "0";
+
+      new GuiScriptNotifyCtrl(SPGuiNotifyControl) {
+         onChildAdded = "0";
+         onChildRemoved = "0";
+         onChildResized = "0";
+         onParentResized = "1";
+         onResize = "0";
+         onLoseFirstResponder = "1";
+         onGainFirstResponder = "1";
+         position = "4 21";
+         extent = "792 575";
+         minExtent = "500 300";
+         horizSizing = "windowRelative";
+         vertSizing = "windowRelative";
+         profile = "GuiDefaultProfile";
+         visible = "1";
+         active = "1";
+         tooltipProfile = "GuiToolTipProfile";
+         hovertime = "1000";
+         isContainer = "1";
+         internalName = "SPGuiNotifyControl";
+         canSave = "1";
+         canSaveDynamicFields = "0";
+
+         new GuiBitmapCtrl() {
+            bitmap = "art/gui/metalPad.png";
+            wrap = "0";
+            position = "0 0";
+            extent = "792 575";
+            minExtent = "500 300";
+            horizSizing = "windowRelative";
+            vertSizing = "windowRelative";
+            profile = "GuiDefaultProfile";
+            visible = "1";
+            active = "1";
+            tooltipProfile = "GuiToolTipProfile";
+            hovertime = "1000";
+            isContainer = "1";
+            canSave = "1";
+            canSaveDynamicFields = "0";
+
+            new GuiTextCtrl(DeathMatchText1) {
+               text = "DeathMatch";
+               maxLength = "1024";
+               margin = "0 0 0 0";
+               padding = "0 0 0 0";
+               anchorTop = "0";
+               anchorBottom = "0";
+               anchorLeft = "0";
+               anchorRight = "0";
+               position = "69 9";
+               extent = "164 27";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiOrbitTextBlueProfile";
+               visible = "1";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiTextCtrl(TeamDeathMatchText1) {
+               text = "Team DeathMatch";
+               maxLength = "1024";
+               margin = "0 0 0 0";
+               padding = "0 0 0 0";
+               anchorTop = "0";
+               anchorBottom = "0";
+               anchorLeft = "0";
+               anchorRight = "0";
+               position = "69 9";
+               extent = "164 27";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiOrbitTextBlueProfile";
+               visible = "0";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               hidden = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiTextCtrl(SurvivalText1) {
+               text = "Survival";
+               maxLength = "1024";
+               margin = "0 0 0 0";
+               padding = "0 0 0 0";
+               anchorTop = "0";
+               anchorBottom = "0";
+               anchorLeft = "0";
+               anchorRight = "0";
+               position = "69 9";
+               extent = "164 27";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiOrbitTextBlueProfile";
+               visible = "0";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               hidden = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiToggleButtonCtrl(GameModeButton1) {
+               text = "Game Mode";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               position = "38 66";
+               extent = "227 65";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiMenuButtonProfile";
+               visible = "1";
+               active = "1";
+               variable = "PlaySinglePlayerGui.GameModeButton1";
+               command = "setSPButtonLock(GameModeButton1);";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiBitmapBorderCtrl(GameModeImagePane1) {
+               position = "300 62";
+               extent = "478 279";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiFrameBorderProfile";
+               visible = "1";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+
+               new GuiBitmapCtrl() {
+                  bitmap = "core/art/gui/images/hudfill_inv.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiBitmapCtrl(GameModeDMImage1) {
+                  bitmap = "art/gui/Deathmatchimage.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiBitmapCtrl(GameModeTDMImage1) {
+                  bitmap = "art/gui/TDMimage.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiDefaultProfile";
+                  visible = "0";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  hidden = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiBitmapCtrl(GameModeSvImage1) {
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiDefaultProfile";
+                  visible = "0";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  hidden = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiToggleButtonCtrl(DMButton1) {
+                  text = "DeathMatch";
+                  groupNum = "-1";
+                  buttonType = "ToggleButton";
+                  useMouseEvents = "0";
+                  position = "6 243";
+                  extent = "140 30";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiMenuButtonProfile";
+                  visible = "1";
+                  active = "1";
+                  variable = "GameModeImagePane1.DMButton1";
+                  command = "SPDMButtonGo();";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiToggleButtonCtrl(TDMButton1) {
+                  text = "TeamDeathMatch";
+                  groupNum = "-1";
+                  buttonType = "ToggleButton";
+                  useMouseEvents = "0";
+                  position = "161 243";
+                  extent = "158 30";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiMenuButtonProfile";
+                  visible = "1";
+                  active = "1";
+                  variable = "GameModeImagePane1.TDMButton1";
+                  command = "SPTDMButtonGo();";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiToggleButtonCtrl(SvButton1) {
+                  text = "Survival";
+                  groupNum = "-1";
+                  buttonType = "ToggleButton";
+                  useMouseEvents = "0";
+                  position = "334 243";
+                  extent = "140 30";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiMenuButtonProfile";
+                  visible = "1";
+                  active = "1";
+                  variable = "GameModeImagePane1.SvButton1";
+                  command = "SPSvButtonGo();";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+            };
+            new GuiToggleButtonCtrl(MapButton1) {
+               text = "Map";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               position = "38 169";
+               extent = "227 65";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiMenuButtonProfile";
+               visible = "1";
+               active = "1";
+               variable = "PlaySinglePlayerGui.MapButton1";
+               command = "setSPButtonLock(MapButton1);";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiBitmapBorderCtrl(MapImagePane1) {
+               position = "300 62";
+               extent = "478 279";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiFrameBorderProfile";
+               visible = "0";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "1";
+               hidden = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+
+               new GuiBitmapCtrl() {
+                  bitmap = "core/art/gui/images/hudfill_inv.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiBitmapCtrl(SelectedMapImage1) {
+                  bitmap = "levels/Empty Terrain_preview";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiBitmapButtonCtrl(SelectLeft1) {
+                  bitmap = "art/gui/previous-button";
+                  bitmapMode = "Stretched";
+                  autoFitExtents = "0";
+                  useModifiers = "0";
+                  useStates = "1";
+                  groupNum = "-1";
+                  buttonType = "PushButton";
+                  useMouseEvents = "0";
+                  position = "8 100";
+                  extent = "11 81";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  command = "MapImagePane1.acceptClickedL();";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiBitmapButtonCtrl(SelectRight1) {
+                  bitmap = "art/gui/next-button";
+                  bitmapMode = "Stretched";
+                  autoFitExtents = "0";
+                  useModifiers = "0";
+                  useStates = "1";
+                  groupNum = "-1";
+                  buttonType = "PushButton";
+                  useMouseEvents = "0";
+                  position = "459 100";
+                  extent = "11 81";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  command = "MapImagePane1.acceptClickedR();";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+            };
+            new GuiBitmapBorderCtrl(SPLoginImagePane) {
+               position = "38 333";
+               extent = "227 173";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiFrameBorderProfile";
+               visible = "1";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+
+               new GuiBitmapCtrl() {
+                  bitmap = "core/art/gui/images/hudfill_inv.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "219 165";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(SPLoginLabel) {
+                  text = "Login";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "54 18";
+                  extent = "116 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextEditCtrl(SPLoginTextEdit) {
+                  historySize = "0";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "1";
+                  password = "0";
+                  passwordMask = "*";
+                  text = "Login";
+                  maxLength = "20";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "1";
+                  anchorBottom = "0";
+                  anchorLeft = "1";
+                  anchorRight = "0";
+                  position = "41 55";
+                  extent = "144 18";
+                  minExtent = "8 2";
+                  horizSizing = "center";
+                  vertSizing = "windowRelative";
+                  profile = "GuiTextEditProfile";
+                  visible = "1";
+                  active = "1";
+                  command = "$Player::ServerParam1 = \"SPLoginTextEdit.getText()\";";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextEditCtrl(SPPWTextEdit) {
+                  historySize = "0";
+                  tabComplete = "0";
+                  sinkAllKeyEvents = "1";
+                  password = "1";
+                  passwordMask = "*";
+                  text = "Password";
+                  maxLength = "20";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "1";
+                  anchorBottom = "0";
+                  anchorLeft = "1";
+                  anchorRight = "0";
+                  position = "41 85";
+                  extent = "144 18";
+                  minExtent = "8 2";
+                  horizSizing = "center";
+                  vertSizing = "windowRelative";
+                  profile = "GuiTextEditProfile";
+                  visible = "1";
+                  active = "1";
+                  command = "$Player::ServerParam2 = \"SPPWTextEdit.getText()\";";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(SPLoginErrorLabel) {
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "18 134";
+                  extent = "190 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+		  text = "";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+            };
+            new GuiToggleButtonCtrl(CharacterButton1) {
+               text = "Character";
+               groupNum = "-1";
+               buttonType = "ToggleButton";
+               useMouseEvents = "0";
+               position = "38 272";
+               extent = "227 65";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiMenuButtonProfile";
+               visible = "1";
+               active = "1";
+               variable = "PlaySinglePlayerGui.CharacterButton1";
+               command = "setSPButtonLock(CharacterButton1);";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiBitmapBorderCtrl(CharacterImagePane1) {
+               position = "300 62";
+               extent = "478 279";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiFrameBorderProfile";
+               visible = "0";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "1";
+               hidden = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+
+               new GuiBitmapCtrl() {
+                  bitmap = "core/art/gui/images/hudfill_inv.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 271";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+
+                  new GuiTextCtrl(SPCharNameLabel) {
+                     text = "Character Name :";
+                     maxLength = "1024";
+                     margin = "0 0 0 0";
+                     padding = "0 0 0 0";
+                     anchorTop = "0";
+                     anchorBottom = "0";
+                     anchorLeft = "0";
+                     anchorRight = "0";
+                     position = "25 16";
+                     extent = "146 17";
+                     minExtent = "8 2";
+                     horizSizing = "windowRelative";
+                     vertSizing = "windowRelative";
+                     profile = "GuiOrbitTextProfile";
+                     visible = "1";
+                     active = "1";
+                     tooltipProfile = "GuiToolTipProfile";
+                     hovertime = "1000";
+                     isContainer = "0";
+                     canSave = "1";
+                     canSaveDynamicFields = "0";
+                  };
+                  new GuiTextEditCtrl(SPNameTextEdit) {
+                     historySize = "0";
+                     tabComplete = "0";
+                     sinkAllKeyEvents = "1";
+                     password = "0";
+                     passwordMask = "*";
+                     text = "";
+                     maxLength = "15";
+                     margin = "0 0 0 0";
+                     padding = "0 0 0 0";
+                     anchorTop = "0";
+                     anchorBottom = "0";
+                     anchorLeft = "0";
+                     anchorRight = "0";
+                     position = "271 15";
+                     extent = "144 18";
+                     minExtent = "8 2";
+                     horizSizing = "windowRelative";
+                     vertSizing = "windowRelative";
+                     profile = "GuiTextEditProfile";
+                     visible = "1";
+                     active = "1";
+                     command = "$Pref::Player::Name = \"SPNameTextEdit.getText()\";";
+                     tooltipProfile = "GuiToolTipProfile";
+                     hovertime = "1000";
+                     isContainer = "1";
+                     canSave = "1";
+                     canSaveDynamicFields = "0";
+                  };
+                  new GuiTextCtrl(SPSkinSelectLabel) {
+                     text = "Skin Selection :";
+                     maxLength = "1024";
+                     margin = "0 0 0 0";
+                     padding = "0 0 0 0";
+                     anchorTop = "0";
+                     anchorBottom = "0";
+                     anchorLeft = "0";
+                     anchorRight = "0";
+                     position = "30 68";
+                     extent = "125 17";
+                     minExtent = "8 2";
+                     horizSizing = "windowRelative";
+                     vertSizing = "windowRelative";
+                     profile = "GuiOrbitTextBlueProfile";
+                     visible = "1";
+                     active = "1";
+                     tooltipProfile = "GuiToolTipProfile";
+                     hovertime = "1000";
+                     isContainer = "0";
+                     canSave = "1";
+                     canSaveDynamicFields = "0";
+                  };
+                  new GuiPopUpMenuCtrl(SPSkinChoiceRollout) {
+                     maxPopupHeight = "200";
+                     sbUsesNAColor = "0";
+                     reverseTextList = "0";
+                     bitmapBounds = "16 16";
+                     maxLength = "1024";
+                     margin = "0 0 0 0";
+                     padding = "0 0 0 0";
+                     anchorTop = "1";
+                     anchorBottom = "0";
+                     anchorLeft = "1";
+                     anchorRight = "0";
+                     position = "274 67";
+                     extent = "138 19";
+                     minExtent = "8 2";
+                     horizSizing = "right";
+                     vertSizing = "bottom";
+                     profile = "GuiPopUpMenuProfile";
+                     visible = "1";
+                     active = "1";
+                     tooltipProfile = "GuiToolTipProfile";
+                     hovertime = "1000";
+                     isContainer = "1";
+                     canSave = "1";
+                     canSaveDynamicFields = "0";
+                  };
+               };
+            };
+            new GuiBitmapBorderCtrl(SummaryImagePane1) {
+               position = "300 350";
+               extent = "478 179";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiFrameBorderProfile";
+               visible = "1";
+               active = "1";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "1";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+
+               new GuiBitmapCtrl() {
+                  bitmap = "core/art/gui/images/hudfill_inv.png";
+                  wrap = "0";
+                  position = "4 4";
+                  extent = "470 171";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiDefaultProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(HostMapNameLabel1) {
+                  text = "Map Name :";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "50 10";
+                  extent = "116 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(MapNameControl1) {
+                  text = "Empty Terrain";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "252 5";
+                  extent = "191 26";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextBlueProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(HostTimeLimitLabel1) {
+                  text = "Time Limit :";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "50 40";
+                  extent = "116 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiPopUpMenuCtrl(TimeLimitRollout1) {
+                  maxPopupHeight = "200";
+                  sbUsesNAColor = "0";
+                  reverseTextList = "0";
+                  bitmapBounds = "16 16";
+                  text = "20";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "1";
+                  anchorBottom = "0";
+                  anchorLeft = "1";
+                  anchorRight = "0";
+                  position = "278 39";
+                  extent = "138 19";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiPopUpMenuProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(HostScoreLimitLabel1) {
+                  text = "Score Limit :";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "50 70";
+                  extent = "116 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiPopUpMenuCtrl(GoalScoreRollout1) {
+                  maxPopupHeight = "200";
+                  sbUsesNAColor = "0";
+                  reverseTextList = "0";
+                  bitmapBounds = "16 16";
+                  text = "30";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "1";
+                  anchorBottom = "0";
+                  anchorLeft = "1";
+                  anchorRight = "0";
+                  position = "278 70";
+                  extent = "138 19";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiPopUpMenuProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(HostMinPlayersLabel1) {
+                  text = "Min. Players :";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "50 100";
+                  extent = "116 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiPopUpMenuCtrl(MinPlayerRollout1) {
+                  maxPopupHeight = "200";
+                  sbUsesNAColor = "0";
+                  reverseTextList = "0";
+                  bitmapBounds = "16 16";
+                  text = "  1";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "1";
+                  anchorBottom = "0";
+                  anchorLeft = "1";
+                  anchorRight = "0";
+                  position = "278 99";
+                  extent = "138 19";
+                  minExtent = "8 2";
+                  horizSizing = "right";
+                  vertSizing = "bottom";
+                  profile = "GuiPopUpMenuProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiTextCtrl(HostMapCycleLabel1) {
+                  text = "Map Cycle :";
+                  maxLength = "1024";
+                  margin = "0 0 0 0";
+                  padding = "0 0 0 0";
+                  anchorTop = "0";
+                  anchorBottom = "0";
+                  anchorLeft = "0";
+                  anchorRight = "0";
+                  position = "50 130";
+                  extent = "116 17";
+                  minExtent = "8 2";
+                  horizSizing = "windowRelative";
+                  vertSizing = "windowRelative";
+                  profile = "GuiOrbitTextProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "1";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+               new GuiCheckBoxCtrl(GameCyclingToggle1) {
+                  text = "Button";
+                  groupNum = "-1";
+                  buttonType = "ToggleButton";
+                  useMouseEvents = "0";
+                  position = "280 130";
+                  extent = "14 17";
+                  minExtent = "8 8";
+                  horizSizing = "relative";
+                  vertSizing = "relative";
+                  profile = "GuiCheckBoxProfile";
+                  visible = "1";
+                  active = "1";
+                  tooltipProfile = "GuiToolTipProfile";
+                  hovertime = "1000";
+                  isContainer = "0";
+                  canSave = "1";
+                  canSaveDynamicFields = "0";
+               };
+            };
+            new GuiButtonCtrl() {
+               text = "Back";
+               groupNum = "-1";
+               buttonType = "PushButton";
+               useMouseEvents = "0";
+               position = "38 511";
+               extent = "151 51";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiMenuButtonProfile";
+               visible = "1";
+               active = "1";
+               command = "Canvas.setContent( MainMenuGui );";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+            new GuiButtonCtrl() {
+               text = "Start Game";
+               groupNum = "-1";
+               buttonType = "PushButton";
+               useMouseEvents = "0";
+               position = "229 511";
+               extent = "151 51";
+               minExtent = "8 2";
+               horizSizing = "windowRelative";
+               vertSizing = "windowRelative";
+               profile = "GuiMenuButtonProfile";
+               visible = "1";
+               active = "1";
+               command = "PlaySinglePlayerGuiStartLevel($Server::MissionFile);";
+               tooltipProfile = "GuiToolTipProfile";
+               hovertime = "1000";
+               isContainer = "0";
+               canSave = "1";
+               canSaveDynamicFields = "0";
+            };
+         };
+      };
+   };
+};
+//--- OBJECT WRITE END ---
+
+// Putting this first because other PlaySinglePlayerGui
+// startup functions may need it.
+function MapImagePane1::setImage( %this, %index )
+{
+   if (%index < 0)
+      %index = $LevelsArray::levelCount - 1;
+   else if (%index >= $LevelsArray::levelCount) 
+      %index = 0; 
+   %levelName = fileBase($LevelsArray[%index]);
+
+   %LevelInfoObject = getLevelInfo($LevelsArray[%index]);
+
+   if (%LevelInfoObject != 0)
+   {
+      if(%LevelInfoObject.LevelName !$= "")
+         %levelName = %LevelInfoObject.LevelName;
+      else if(%LevelInfoObject.name !$= "")
+         %levelName = %LevelInfoObject.name;
+         
+      %this.selectedLevelName = %levelName;
+         
+      MapNameControl1.text = %levelName;
+      
+      %LevelInfoObject.delete();
+   }
+      %this.selectedLevel = $LevelsArray[%index];
+   
+      setPreviewImage($LevelsArray[%index], SelectedMapImage1);
+      
+      %this.selectedIndex = %index;
+}
+
+function PlaySinglePlayerGuiStartLevel( %mission )
+{
+	// Failsafe Pref Update
+   $Game::EndGameScore = GoalScoreRollout1.getText();
+   $Game::Duration = TimeLimitRollout1.getText();
+   $Pref::Server::MinPlayers = MinPlayerRollout1.getText();
+   $Game::AllowCycling = GameCyclingToggle1.isStateOn();
+   $Pref::Player::Name = SPNameTextEdit.getText();
+
+   $Player::ServerParam1 = SPLoginTextEdit.getText();
+   $Player::ServerParam2 = SPPWTextEdit.getText();
+   $Player::ServerParam3 = SPSkinChoiceRollout.getText();
+
+   if( %mission $= "" )
+      %mission = findFirstFile($Server::MissionFileSpec);
+
+   // Show the loading screen immediately.
+   if ( isObject( LoadingGui ) )
+   {
+      Canvas.setContent("LoadingGui");
+      LoadingProgress.setValue(1);
+      LoadingProgressTxt.setValue("LOADING MISSION FILE");
+      Canvas.repaint();
+   }
+   
+   createAndConnectToLocalServer( "SinglePlayer", %mission );
+}
+
+function PlaySinglePlayerGui::onWake( %this )
+{
+   %this.setLevelInfo();
+   
+   setSPGameType($Server::GameType);
+	setSPButtonLock();
+	
+   SPSkinChoiceRollout.clear();
+   SPSkinChoiceRollout.add("base");
+   SPSkinChoiceRollout.add("DarkBlue");
+   SPSkinChoiceRollout.add("DarkGreen");
+   SPSkinChoiceRollout.add("LightGreen");
+   SPSkinChoiceRollout.add("Orange");
+   SPSkinChoiceRollout.add("Red");
+   SPSkinChoiceRollout.add("Teal");
+   SPSkinChoiceRollout.add("Violet");
+   SPSkinChoiceRollout.add("Yellow");
+	
+   if (!$Pref::Server::MinPlayers)
+      $Pref::Server::MinPlayers = 0;
+	
+   GoalScoreRollout1.clear();
+   TimeLimitRollout1.clear();		
+	
+   GoalScoreRollout1.add("Infinite", 0);
+   TimeLimitRollout1.add("Infinite", 0);
+      
+   %id = 1;
+   for(%count = 5; %count <= 30; %count += 5) 
+   {
+      GoalScoreRollout1.add(%count, %id);
+      TimeLimitRollout1.add(%count, %id);
+      %id++;
+   }
+   
+   for(%i = 1; %i <= $Pref::Server::MaxPlayers; %i++)
+   {
+      MinPlayerRollout1.add(%i, %i-1);
+   }
+
+   %timeLim = TimeLimitRollout1.findText($Game::Duration);
+   %score = GoalScoreRollout1.findText($Game::EndGameScore);
+   
+   if (%timeLim != -1)
+      TimeLimitRollout1.setSelected(%timeLim);
+   else
+      TimeLimitRollout1.setSelected(4);
+      
+   if (%score != -1)
+      GoalScoreRollout1.setSelected(%score);
+   else
+      GoalScoreRollout1.setSelected(4);
+      
+   if ($Game::AllowCycling == true)
+      GameCyclingToggle1.setStateOn(true);
+   else
+      GameCyclingToggle1.setStateOn(false);
+}
+
+function setSPGameType( %missionType )
+{
+   switch$ (%missionType)
+   {
+      case "Team Deathmatch":
+      $Server::GameType = "Team Deathmatch";
+      TeamDeathmatchText1.visible = true;
+      DeathmatchText1.visible = false;
+      SurvivalText1.visible = false;
+      
+      case "Survival":
+      $Server::GameType = "Survival";		
+      SurvivalText1.visible = true;
+      DeathmatchText1.visible = false;
+      TeamDeathmatchText1.visible = false;
+      
+      default:
+      $Server::GameType = "Deathmatch";		
+      DeathmatchText1.visible = true;
+      SurvivalText1.visible = false;
+      TeamDeathmatchText1.visible = false;
+      %missionType = "Deathmatch";
+   }
+   
+   $Server::MissionType  = %missionType;
+}
+
+function PlaySinglePlayerGui::setLevelInfo( %this )
+{
+   if ($LevelsArray[0] $= "")
+   {
+      %i = 0;
+      for(%file = findFirstFile($Server::MissionFileSpec); %file !$= ""; %file = findNextFile($Server::MissionFileSpec))
+      {
+         $LevelsArray[%i] = %file;
+         %i++;
+      }
+      $LevelsArray::levelCount = %i;
+   }
+	
+   if ($Server::MissionFile $= "")
+      $Server::MissionFile = $LevelsArray[0];
+   
+   %levelInfo = getLevelInfo( $Server::MissionFile );
+   
+   if(%levelInfo.LevelName !$= "")
+      MapNameControl1.text = %levelInfo.LevelName;
+   else if(%levelInfo.name !$= "")
+      MapNameControl1.text = %levelInfo.name;
+   else
+      MapNameControl1.text = "Unnamed Map";
+      
+   setPreviewImage($Server::MissionFile, SelectedMapImage1);
+
+   %levelInfo.delete();
+}
+/* Declared in HostGui.
+function setPreviewImage( %mission, %bitmapControl )
+{
+      // Find the preview image
+      %levelPreview = filePath(%mission) @ "/" @ fileBase(%mission) @ "_preview";
+      
+      
+      // Test against all of the different image formats
+      // This should probably be moved into an engine function
+      if (isFile(%levelPreview @ ".png") ||
+          isFile(%levelPreview @ ".jpg") ||
+          isFile(%levelPreview @ ".bmp") ||
+          isFile(%levelPreview @ ".gif") ||
+          isFile(%levelPreview @ ".jng") ||
+          isFile(%levelPreview @ ".mng") ||
+          isFile(%levelPreview @ ".tga"))
+      {
+         %bitmapControl.setBitmap(%levelPreview);
+      }
+      else
+         %bitmapControl.setBitmap("core/art/gui/images/no-preview");
+}
+*/
+// Button Locks : Lock in Button prefs and display Image Panes
+// Locks : GameModeLock1, MapLock1, CharacterLock1
+// Buttons : GameModeButton1, MapButton1, CharacterButton1
+// Image Panes: GameModeImagePane1, MapImagePane1, CharacterImagePane1
+
+function setSPButtonLock( %button )
+{
+	switch$ (%button )
+	{
+		case "MapButton1":
+		PlaySinglePlayerGui.MapButton1 = 1;
+		//MapLock1.visible = true;
+		MapImagePane1.visible = true;
+		PlaySinglePlayerGui.GameModeButton1 = 0;
+		//GameModeLock1.visible = false;
+		GameModeImagePane1.visible = false;
+		PlaySinglePlayerGui.CharacterButton1 = 0;
+		//CharacterLock1.visible = false;
+		CharacterImagePane1.visible = false;
+		PlaySinglePlayerGui.ButtonLock = "MapButton1";
+		
+		case "CharacterButton1":
+		PlaySinglePlayerGui.CharacterButton1 = 1;
+		//CharacterLock1.visible = true;
+		CharacterImagePane1.visible = true;
+		PlaySinglePlayerGui.GameModeButton1 = 0;
+		//GameModeLock1.visible = false;
+		GameModeImagePane1.visible = false;	
+		PlaySinglePlayerGui.MapButton1 = 0;
+		//MapLock1.visible = false;
+		MapImagePane1.visible = false;
+		PlaySinglePlayerGui.ButtonLock = "CharacterButton1";
+		
+		default:
+		PlaySinglePlayerGui.GameModeButton1 = 1;
+		//GameModeLock1.visible = true;
+		GameModeImagePane1.visible = true;	
+		PlaySinglePlayerGui.MapButton1 = 0;
+		//MapLock1.visible = false;
+		MapImagePane1.visible = false;
+		PlaySinglePlayerGui.CharacterButton1 = 0;
+		//CharacterLock1.visible = false;
+		CharacterImagePane1.visible = false;
+		PlaySinglePlayerGui.ButtonLock = "GameModeButton1";
+		%button = "GameModeButton1";
+	}
+
+	PlaySinglePlayerGui.ButtonLock = %button;
+}
+
+// GameModeImagePane1 Buttons
+function SPDMButtonGo( %this )
+{
+	GameModeImagePane1.DMButton1 = 1;
+	GameModeImagePane1.TDMButton1 = 0;
+	GameModeImagePane1.SvButton1 = 0;
+	
+	setSPGameType( "DeathMatch" );
+	
+	GameModeDMImage1.visible = true;
+	GameModeTDMImage1.visible = false;
+	GameModeSvImage1.visible = false;
+}
+
+function SPTDMButtonGo( %this )
+{
+	GameModeImagePane1.TDMButton1 = 1;
+	GameModeImagePane1.DMButton1 = 0;
+	GameModeImagePane1.SvButton1 = 0;
+	
+	setSPGameType( "Team DeathMatch" );
+	
+	GameModeTDMImage1.visible = true;
+	GameModeDMImage1.visible = false;
+	GameModeSvImage1.visible = false;
+}
+
+function SPSvButtonGo( %this )
+{
+	GameModeImagePane1.SvButton1 = 1;
+	GameModeImagePane1.DMButton1 = 0;
+	GameModeImagePane1.TDMButton1 = 0;
+	
+	setSPGameType( "Survival" );
+
+	GameModeSvImage1.visible = true;	
+	GameModeDMImage1.visible = false;
+	GameModeTDMImage1.visible = false;
+}
+
+// MapImagePane1 Buttons
+function MapImagePane1::acceptClickedL(%this)
+{
+	MapImagePane1.setImage(MapImagePane1.selectedIndex - 1 );
+
+   if ( !%this.isField("selectedIndex" ) )
+      %this.selectedIndex = 0;
+   
+    $Server::MissionFile = $LevelsArray[%this.selectedIndex]; 
+}
+
+function MapImagePane1::acceptClickedR(%this)
+{
+	MapImagePane1.setImage(MapImagePane1.selectedIndex + 1 );
+
+   if ( !%this.isField("selectedIndex" ) )
+      %this.selectedIndex = 0;
+   
+    $Server::MissionFile = $LevelsArray[%this.selectedIndex]; 
+}
