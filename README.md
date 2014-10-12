@@ -17,3 +17,5 @@ Included in the template are updated modular art files that will overwrite some 
 art files of stock Torque3D. These provide a modernized look and feel to the game GUI's, 
 and introduce the developer to the power of altering Torque's modular art. Art is designed 
 and created by Jesse Allen. 
+
+*Orbitron fonts are licensed under SIL Open Font License by Matt McInerey.
