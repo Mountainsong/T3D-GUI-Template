@@ -637,6 +637,10 @@
 
 function JoinServerDlg::onWake()
 {
+   JoinNameTextEdit.text = $Pref::Player::Name;
+   JoinLoginTextEdit.text = $Pref::ServerParam1;
+   JoinPWTextEdit.text = $Pref::ServerParam2;
+
    // Double check the status. Tried setting this the control
    // inactive to start with, but that didn't seem to work.
    JS_joinServer.setActive(JS_serverList.rowCount() > 0);

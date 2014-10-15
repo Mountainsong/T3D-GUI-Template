@@ -1128,6 +1128,10 @@ function PlaySinglePlayerGui::onWake( %this )
    
    setSPGameType($Server::GameType);
 	setSPButtonLock();
+
+   SPNameTextEdit.text = $Pref::Player::Name;
+   SPLoginTextEdit.text = $Pref::ServerParam1;
+   SPPWTextEdit.text = $Pref::ServerParam2;
 	
    SPSkinChoiceRollout.clear();
    SPSkinChoiceRollout.add("base");

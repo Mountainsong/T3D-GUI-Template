@@ -1183,6 +1183,11 @@ function HostGui::onWake( %this )
    
    setGameType($Server::GameType);
 	setButtonLock();
+
+   HostServerNameTextEdit.text = $Pref::Server::Name;
+   HostNameTextEdit.text = $Pref::Player::Name;
+   HostLoginTextEdit.text = $Pref::ServerParam1;
+   HostPWTextEdit.text = $Pref::ServerParam2;
 	
    HostSkinChoiceRollout.clear();
    HostSkinChoiceRollout.add("base");
